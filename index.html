@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI电商短视频内容策略 · 智能生成</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip no-print" href="#view-create">跳到主要内容</a>
+
+<!-- ============ 顶部导航 ============ -->
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="logo" data-go="home" href="#/home" tabindex="0" role="button" aria-label="返回主程序首页">
+      <span class="logo-mark" aria-hidden="true">AI</span>
+      <span class="logo-text">电商短视频内容策略</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <button class="nav-btn" data-go="home">主程序</button>
+      <button class="nav-btn" data-go="create">创建策略报告</button>
+      <button class="nav-btn" data-go="kb">AI电商知识库</button>
+      <button class="nav-btn" id="btn-settings" aria-haspopup="dialog">AI 设置</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ============ 视图 1：主程序首页 ============ -->
+<section id="view-home" class="view active">
+  <div class="hero">
+    <div class="badge">输入产品信息 · AI 自动分析 · 一键生成内容策略</div>
+    <h1>AI电商短视频<span class="hl">内容策略</span><br>智能生成</h1>
+    <p class="hero-sub">
+      输入产品信息，AI 自动分析人群画像、场景卖点，生成专业内容策略报告。<br>
+      从卖点拆解到买点翻译，从人群定位到可拍的脚本提示词，一次给全。
+    </p>
+    <div class="hero-actions">
+      <button class="btn btn-primary btn-lg" data-go="create">免费开始使用</button>
+      <button class="btn btn-ghost btn-lg" data-go="kb">AI电商知识库</button>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat"><b data-count="5">5</b><span>大策略板块</span></div>
+      <div class="stat"><b data-count="3">3</b><span>种人群拆解维度</span></div>
+      <div class="stat"><b data-count="8">8</b><span>组测试矩阵脚本</span></div>
+      <div class="stat"><b data-count="0">0</b><span>元 · 免费生成</span></div>
+    </div>
+  </div>
+
+  <div class="dark-band reveal">
+    <div class="sec-title"><h2>三步拿到能拍的策略</h2><span>从产品信息到分镜脚本</span></div>
+    <div class="flow" data-reveal-group>
+      <div class="flow-item">
+        <div class="flow-no">01</div>
+        <h3>填写产品信息</h3>
+        <p>品类、价格带、客单价、当前卖点、内容困境、卖点详述与产品图片</p>
+      </div>
+      <div class="flow-item">
+        <div class="flow-no">02</div>
+        <h3>AI 拆解分析</h3>
+        <p>卖点五维拆解、人群画像打分、场景洞察、卖点转买点</p>
+      </div>
+      <div class="flow-item">
+        <div class="flow-no">03</div>
+        <h3>输出策略报告</h3>
+        <p>主攻人群 / 核心买点 / 核心场景 + 可执行的脚本提示词</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="start-guide" class="start-guide" style="display:none">
+    <div class="sg-h">还没有报告 · 从这里开始</div>
+    <ol class="sg-steps">
+      <li><b>先看一眼示例</b><span>下面「报告包含什么」就是一份报告会交付的内容，5 个板块 + 数据复盘表。</span></li>
+      <li><b>填一条真实产品</b><span>只有「品类」必填，但卖点详述写得越具体，拆解越准。</span></li>
+      <li><b>先跑内置引擎</b><span>不用配任何接口就能出完整报告。想要更贴合产品，再去右上角「AI 设置」填接口。</span></li>
+      <li><b>从 00 号行动清单开工</b><span>报告开头就给了本周先做的三件事，不用自己从 8 组里挑。</span></li>
+    </ol>
+    <div class="sg-actions">
+      <button class="btn btn-primary" data-go="create">现在生成第一份</button>
+      <button class="btn btn-ghost" data-go="kb">先看方法论</button>
+    </div>
+  </div>
+
+  <div class="sec-title reveal" id="recent-sec" style="display:none"><h2>最近报告</h2><span>点击可直接打开</span></div>
+  <div class="cards" id="recent-list" data-reveal-group></div>
+
+  <div class="sec-title reveal"><h2>报告包含什么</h2><span>一次生成，全部可落地</span></div>
+  <div class="cards" data-reveal-group>
+    <div class="card">
+      <div class="card-no">01</div>
+      <h3>产品卖点拆解</h3>
+      <p>功能 / 效果 / 情绪 / 信任 / 差异化，从"商家想说的"拆到"用户能感知的"</p>
+    </div>
+    <div class="card">
+      <div class="card-no">02</div>
+      <h3>人群拆解</h3>
+      <p>卖点匹配度、痛点强度、表达难度、付费意愿、市场规模五维打分 + 推荐理由</p>
+    </div>
+    <div class="card">
+      <div class="card-no">03</div>
+      <h3>场景拆解</h3>
+      <p>日常场景、新手翻车场景、对比场景……让产品进入用户真实生活</p>
+    </div>
+    <div class="card">
+      <div class="card-no">04</div>
+      <h3>买点翻译</h3>
+      <p>卖点是商家想说的，买点是用户愿意掏钱的理由，逐条对应翻译</p>
+    </div>
+    <div class="card">
+      <div class="card-no">05</div>
+      <h3>测试矩阵</h3>
+      <p>人群 × 场景 × 买点组合，输出完整故事内容与拍摄/提示词脚本</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 视图 2：创建策略报告 ============ -->
+<section id="view-create" class="view">
+  <div class="page-head">
+    <h1>创建策略报告</h1>
+    <p>填写产品信息，AI 将为您生成专属内容策略</p>
+  </div>
+
+  <div class="create-grid">
+    <form id="form" class="form-card" autocomplete="off">
+      <div class="form-block">
+        <label class="lbl">产品名称 <span class="opt">强烈建议填</span></label>
+        <input type="text" id="f-prodname" placeholder="如：智利车厘子 JJ级 2斤装 / 65W氮化镓充电宝">
+        <div class="hint">视频提示词里会写"画面主体是「这个」"。写具体商品名，AI 出图才准；不填则按品类给一个通用主体（如"一箱水果"）</div>
+      </div>
+
+      <div class="form-block">
+        <label class="lbl">品类 <i class="req">必填</i></label>
+        <input type="text" id="f-category" list="catList" placeholder="如：护肤品、零食、小家电" required>
+        <datalist id="catList">
+          <option value="护肤品"></option><option value="零食"></option><option value="小家电"></option>
+          <option value="服饰"></option><option value="母婴"></option><option value="家清日化"></option>
+          <option value="茶饮咖啡"></option><option value="保健品"></option><option value="宠物用品"></option>
+          <option value="数码3C"></option><option value="美妆"></option><option value="家居百货"></option>
+          <option value="办公文具"></option><option value="食品生鲜"></option><option value="汽车用品"></option>
+          <option value="户外运动"></option>
+        </datalist>
+        <div class="hint">品类决定人群底盘与场景库，请尽量写细（如"婴童零食"优于"零食"）</div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-block">
+          <label class="lbl">价格带</label>
+          <select id="f-price">
+            <option value="">请选择</option>
+            <option value="0-50元">0-50元</option>
+            <option value="50-100元">50-100元</option>
+            <option value="100-300元">100-300元</option>
+            <option value="300-500元">300-500元</option>
+            <option value="500元以上">500元以上</option>
+          </select>
+        </div>
+        <div class="form-block">
+          <label class="lbl">客单价</label>
+          <input type="text" id="f-aov" placeholder="如：89 元 / 单">
+          <div class="hint">实际成交均价，用于判断付费决策链路长短</div>
+        </div>
+      </div>
+
+      <div class="form-block">
+        <label class="lbl">当前主要卖点</label>
+        <input type="text" id="f-selling" placeholder="您目前在短视频中要强调的产品卖点">
+        <div class="hint">例：零添加配方 / 3秒速热 / 一支顶三支</div>
+      </div>
+
+      <div class="form-block">
+        <label class="lbl">当前最大内容困境</label>
+        <select id="f-pain">
+          <option value="">请选择</option>
+          <option value="播放量低，起不来量">播放量低，起不来量</option>
+          <option value="有播放，但没转化">有播放，但没转化</option>
+          <option value="不知道该拍什么内容">不知道该拍什么内容</option>
+          <option value="人群不精准，流量太泛">人群不精准，流量太泛</option>
+          <option value="内容同质化，没记忆点">内容同质化，没记忆点</option>
+          <option value="不会写脚本，拍出来干巴巴">不会写脚本，拍出来干巴巴</option>
+          <option value="容易违规限流，不敢说">容易违规限流，不敢说</option>
+        </select>
+      </div>
+
+      <div class="form-block">
+        <label class="lbl">产品卖点详细描述</label>
+        <textarea id="f-detail" rows="6" placeholder="详细描述产品的功能、材质、工艺、使用场景卖点等信息"></textarea>
+        <div class="hint">写得越具体，拆解越准。建议覆盖：成分/材质、工艺/技术、使用效果、适用人群与场景</div>
+      </div>
+
+      <div class="form-block">
+        <label class="lbl">产品图片 <span class="opt">上限 8 张：主图 3 张 + 详情页 5 张，支持 JPG / PNG</span></label>
+        <div class="upload-2col">
+          <div class="up-box" data-slot="main">
+            <div class="up-head">产品主图 <span class="opt">最多 3 张</span></div>
+            <div class="up-grid" id="grid-main"></div>
+            <label class="up-add">
+              <input type="file" accept="image/jpeg,image/png" multiple hidden id="file-main">
+              <span>+ 添加主图</span>
+            </label>
+            <div class="up-msg" id="msg-main" role="status" aria-live="polite"></div>
+          </div>
+          <div class="up-box" data-slot="detail">
+            <div class="up-head">详情页截图 <span class="opt">最多 5 张</span></div>
+            <div class="up-grid" id="grid-detail"></div>
+            <label class="up-add">
+              <input type="file" accept="image/jpeg,image/png" multiple hidden id="file-detail">
+              <span>+ 添加详情页</span>
+            </label>
+            <div class="up-msg" id="msg-detail" role="status" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+
+<div class="engine-missing" id="engineMissing" hidden role="alert"></div>
+
+      <div class="form-actions">
+        <button type="button" class="btn btn-ghost" data-go="home">返回</button>
+        <button type="submit" class="btn btn-primary btn-lg">生成八组方案</button>
+      </div>
+    </form>
+
+    <aside class="side-card">
+      <h3>填写小贴士</h3>
+      <ul class="tips">
+        <li><b>品类必填。</b>品类决定人群底盘和场景库，写得越细，报告越准。</li>
+        <li><b>卖点详述是核心。</b>AI 会按"功能 / 效果 / 情绪 / 信任 / 差异化"五维重新归类你的卖点。</li>
+        <li><b>困境决定策略重心。</b>比如"有播放无转化"会加强信任背书和价格锚点，"播放量低"会强化前 3 秒钩子。</li>
+        <li><b>图片可选。</b>上传后会出现在报告顶部，方便团队对照画面拍脚本。</li>
+      </ul>
+      <div class="side-note">
+        <b>示例输入</b><br>
+        品类：零食<br>价格带：50-100元<br>主要卖点：零添加配方<br>
+        困境：有播放，但没转化<br>
+        详述：0防腐剂、0甜味剂、0焦糖色、0味精，低温烘焙工艺，儿童与老人可食用
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ 视图 3：策略报告 ============ -->
+<section id="view-report" class="view">
+  <div class="report-bar no-print">
+    <button class="btn btn-ghost" data-go="create">← 修改信息</button>
+    <div class="rb-right">
+      <select id="history-sel" class="hist-sel" title="历史报告"></select>
+      <button class="btn btn-ghost" id="btn-copy">复制全文</button>
+      <button class="btn btn-ghost" id="btn-md">导出 Markdown</button>
+      <button class="btn btn-ghost" id="btn-doc">导出 Word</button>
+      <button class="btn btn-ghost" id="btn-print">导出 PDF</button>
+      <button class="btn btn-ghost danger" id="btn-del">删除</button>
+      <button class="btn btn-primary" data-go="create">再来一份</button>
+    </div>
+  </div>
+  <div id="report-notes" class="notes no-print" aria-live="polite"></div>
+  <div id="report-src" class="src-tip no-print"></div>
+  <div id="report-root" class="report"></div>
+</section>
+
+<!-- ============ 视图 4：AI电商知识库 ============ -->
+<section id="view-kb" class="view">
+  <div class="page-head">
+    <h1>AI电商知识库</h1>
+    <p>短视频内容策略的底层方法论，点开即用</p>
+  </div>
+  <div class="kb-bar no-print">
+    <label class="kb-search">
+      <span class="kb-si" aria-hidden="true">🔍</span>
+      <input type="search" id="kb-q" placeholder="搜方法论：钩子 / 完播率 / 违规词 / 人群…" autocomplete="off" aria-label="搜索知识库">
+    </label>
+    <div class="kb-chips" id="kb-chips" role="group" aria-label="按主题快速筛选"></div>
+    <div class="kb-count" id="kb-count" role="status" aria-live="polite"></div>
+  </div>
+  <div class="kb-grid" id="kb-grid" data-reveal-group></div>
+  <div class="kb-empty" id="kb-empty" style="display:none">
+    <p>没找到包含「<b id="kb-q-echo"></b>」的内容</p>
+    <button class="btn btn-ghost btn-sm" id="kb-reset">清除筛选</button>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">AI电商短视频内容策略 · 智能生成 &nbsp;|&nbsp; 报告内容由本地策略引擎生成，可直接用于选品会 / 内容排期 / 拍摄脚本</div>
+</footer>
+
+<!-- 生成中遮罩 -->
+<div id="loading" class="loading" role="status" aria-live="polite">
+  <div class="loading-box">
+    <div class="spinner" aria-hidden="true"></div>
+    <div class="loading-title">AI 正在生成内容策略</div>
+    <div class="loading-steps" id="loadingSteps"></div>
+  </div>
+</div>
+
+<!-- AI 设置弹窗 -->
+<div id="settings" class="modal" role="dialog" aria-modal="true" aria-labelledby="set-title">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3 id="set-title">AI 设置</h3>
+      <button class="modal-x" id="set-close" aria-label="关闭设置">×</button>
+    </div>
+    <p class="modal-tip">
+      填写后生成报告会调用大模型（内容更贴合你的产品）；不填写则用内置规则引擎，功能完全一致。<br>
+      支持任何 OpenAI 兼容接口（DeepSeek、Kimi、通义、智谱、本地 Ollama 等）。Key 只存在这台电脑的浏览器里。
+    </p>
+    <div class="fld">
+      <label>启用 AI 生成</label>
+      <div class="switch-row">
+        <label class="switch"><input type="checkbox" id="set-enabled"><span></span></label>
+        <span class="switch-txt" id="set-state">未启用（使用内置规则引擎）</span>
+      </div>
+    </div>
+    <div class="fld">
+      <label>接口地址 Base URL</label>
+      <input type="text" id="set-base" placeholder="https://api.deepseek.com/v1">
+      <div class="hint">程序会自动拼接 /chat/completions</div>
+    </div>
+    <div class="fld">
+      <label>API Key</label>
+      <input type="password" id="set-key" placeholder="sk-...">
+    </div>
+    <div class="fld">
+      <label>模型名</label>
+      <input type="text" id="set-model" placeholder="deepseek-chat">
+      <div class="hint">要分析产品图片，需填支持视觉的模型名（如 qwen-vl-max、glm-4v、kimi-latest）</div>
+    </div>
+    <div class="fld">
+      <label>视觉分析（把产品图发给模型）</label>
+      <div class="switch-row">
+        <label class="switch"><input type="checkbox" id="set-vision"><span></span></label>
+        <span class="switch-txt" id="set-vision-state">未开启</span>
+      </div>
+      <div class="hint">开启后模型会读取你上传的产品图（主图优先，最多 4 张）。DeepSeek 官方接口无视觉模型，此项会自动保持关闭。</div>
+    </div>
+    <div class="fld">
+      <label>产品图存储</label>
+      <div class="hint" id="set-imgdb">检测中…</div>
+    </div>
+    <div class="fld">
+      <label>数据备份</label>
+      <div class="hint">所有报告只存在这台电脑的浏览器里，换设备或清理缓存都会丢。建议定期导出一份。</div>
+      <div class="row-btns">
+        <button class="btn btn-ghost btn-sm" id="btn-export-all">导出全部数据</button>
+        <button class="btn btn-ghost btn-sm" id="btn-import-all">导入恢复</button>
+        <input type="file" id="file-import" accept="application/json,.json" hidden>
+      </div>
+      <div class="hint" id="backup-stat"></div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="set-test">测试连接</button>
+      <button class="btn btn-primary" id="set-save">保存</button>
+    </div>
+    <div class="modal-result" id="set-result"></div>
+  </div>
+</div>
+
+<script src="engine.js"></script>
+<script src="llm.js"></script>
+<script src="export.js"></script>
+<script src="db.js"></script>
+<script src="insights.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
