@@ -64,4 +64,4 @@ test.js      测试
 
 ## License
 
-MIT
+AGPL-3.0
